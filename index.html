@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap" rel="stylesheet">
@@ -158,7 +161,7 @@
 </style>
 
 	</head>
-<body>
+<body onload="fetch()">
 
 <nav class="navbar navbar-expand-lg nav_style p-3">
   <a class="navbar-brand pl-5" href="#">COVID-19</a>
@@ -194,13 +197,13 @@
 	<div class="row w-100 h-100" >
 		<div class="col-lg-5 col-md-5 col-12 order-lg-1 order-2">
 			<div class="leftside w-100 h-100 d-flex justify-content-center align-items-center">
-				<img src="eksath.png" width="300" height="300">
+				<img src="images/eksath.png" width="300" height="300">
 			</div>
 		</div>
 		<div class="col-lg-7 col-md-7 col-12 order-lg-2 order-1" >
 			<div class="rightside w-100 h-100 d-flex justify-content-center align-items-center">
 				<h1>Let's Stay safe & Fight Together
-					Against Cor <span class="corona_root"><img src="virus.png" width="50" height="50"></span> na Virus</h1>
+					Against Cor <span class="corona_root"><img src="images/virus.png" width="50" height="50"></span> na Virus</h1>
 			</div>
 		</div>
 	</div>
@@ -209,31 +212,24 @@
 
 <!*************************** Corona Latest Update ********************-->
 
-<section class="corona_update">
+<section class="corona_update container-fluid">
 	<div class ="mb-3">
-		<h3 class="text-uppercase text-center"> covid-19 updates</h3>
+		<h3 class="text-uppercase text-center"> covid-19 Updates</h3>
 	</div>
-
-	<div class="d-flex justify-content-around align-items-center count_style">
-		<div >
-			<h1 class="count"> 20,45,345</h1>
-			<p> Passegers screened at airport </p>
-		</div>
-
-		<div >
-			<h1 class="count">12,345</h1>
-			<p> Active Covid-19 Cases </p>
-		</div>
-	
-	<div >
-			<h1 class="count">2,000</h1>
-			<p> Current Dicharged Cases </p>
-		</div>
-	
-	<div >
-			<h1 class="count">5,700</h1>
-			<p> Death Cases </p>
-		</div>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped text-center" id="tbval">
+    <tr>
+      <th>Country</th>
+      <th>TotalConfirmed</th>
+      <th>TotalRecovered</th>
+      <th>TotaDeaths</th>
+       <th>NewConfirmed</th>
+      <th>NewRecovered</th>
+      <th>NewDeaths</th>
+      
+    </tr>
+  </table>
+</div>
 	
 	</div>
 </section>
@@ -248,7 +244,7 @@
 	 
 	 <div class="row pt-5">
 	 	<div class="col-lg-5 col-md-6 col-12 ml-5 about_res">
-	 		<img src="about_corona.png" class="img-fluid">
+	 		<img src="images/about_corona.png" class="img-fluid">
 	 	</div>
 	 	<div class="col-lg-6 col-md-6 col-12">
 	 		<h2>What is COVID-19 (CORONA-Virus) </h2>
@@ -275,42 +271,42 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
 		<div class="row">
 			<div class="col-lg-4 col-md-8 col-12 mt-5">
 				<figure class="text-center">
-				<img src="cough.jpg" class="imgfluid bg-info" width="150" height="150">
+				<img src="images/cough.jpg" class="imgfluid bg-info" width="150" height="150">
 				<figcaption> Cough</figcaption>
 				</figure>
 			</div>
 
 			<div class="col-lg-4 col-md-8 col-12 mt-5">
 				<figure class="text-center">
-				<img src="runny_nose.png" class="imgfluid bg-info" width="150" height="150">
+				<img src="images/runny_nose.png" class="imgfluid bg-info" width="150" height="150">
 				<figcaption> RunnyNose</figcaption>
 				</figure>
 			</div>
 
 			<div class="col-lg-4 col-md-8 col-12 mt-5">
 				<figure class="text-center">
-				<img src="fever.png" class="imgfluid bg-info" width="150" height="150">
+				<img src="images/fever.png" class="imgfluid bg-info" width="150" height="150">
 				<figcaption> Fever</figcaption>
 				</figure>
 			</div>
 
 			<div class="col-lg-4 col-md-8 col-12 mt-5">
 				<figure class="text-center">
-				<img src="cold.jpg" class="imgfluid bg-info" width="150" height="150">
+				<img src="images/cold.jpg" class="imgfluid bg-info" width="150" height="150">
 				<figcaption> Cold</figcaption>
 				</figure>
 			</div>
 
 			<div class="col-lg-4 col-md-8 col-12 mt-5">
 				<figure class="text-center">
-				<img src="tired.jpg" class="imgfluid bg-info" width="150" height="150">
+				<img src="images/tired.jpg" class="imgfluid bg-info" width="150" height="150">
 				<figcaption> Tiredness</figcaption>
 				</figure>
 			</div>
 
 			<div class="col-lg-4 col-md-8 col-12 mt-5">
 				<figure class="text-center">
-				<img src="breath.png" class="imgfluid bg-info" width="150" height="150">
+				<img src="images/breath.png" class="imgfluid bg-info" width="150" height="150">
 				<figcaption> Difficult Breathing</figcaption>
 				</figure>
 			</div>
@@ -335,7 +331,7 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
      			<div class="row">
      				<div class="col-lg-4 col-md-4 col-12 mt-5" >
      				<figure class="text-center">
-				<img src="hand_wash.jpg" class="imgfluid bg-info" width="90" height="90">
+				<img src="images/hand_wash.jpg" class="imgfluid bg-info" width="90" height="90">
 				</figure>
 			
      				</div>
@@ -353,7 +349,7 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
      			<div class="row">
      				<div class="col-lg-4 col-md-4 col-12 mt-5" >
      				<figure class="text-center">
-				<img src="mask.jpg" class="imgfluid bg-info" width="90" height="90">
+				<img src="images/mask.jpg" class="imgfluid bg-info" width="90" height="90">
 				</figure>
 			
      				</div>
@@ -371,7 +367,7 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
      			<div class="row">
      				<div class="col-lg-4 col-md-4 col-12 mt-5" >
      				<figure class="text-center">
-				<img src="tine.png" class="imgfluid bg-info" width="90" height="90">
+				<img src="images/tine.png" class="imgfluid bg-info" width="90" height="90">
 				</figure>
 			
      				</div>
@@ -388,7 +384,7 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
      			<div class="row">
      				<div class="col-lg-4 col-md-4 col-12 mt-5" >
      				<figure class="text-center">
-				<img src="news.png" class="imgfluid bg-info" width="90" height="90">
+				<img src="images/news.png" class="imgfluid bg-info" width="90" height="90">
 				</figure>
 			
      				</div>
@@ -405,7 +401,7 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
      			<div class="row">
      				<div class="col-lg-4 col-md-4 col-12 mt-5" >
      				<figure class="text-center">
-				<img src="home.jpg" class="imgfluid bg-info" width="90" height="90">
+				<img src="images/home.jpg" class="imgfluid bg-info" width="90" height="90">
 				</figure>
 			
      				</div>
@@ -422,7 +418,7 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
      			<div class="row">
      				<div class="col-lg-4 col-md-4 col-12 mt-5" >
      				<figure class="text-center">
-				<img src="ilness.jpg" class="imgfluid bg-info" width="90" height="90">
+				<img src="images/fever.jpg" class="imgfluid bg-info" width="90" height="90">
 				</figure>
 			
      				</div>
@@ -533,7 +529,7 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
 
 <footer class="mt-5">
 	<div class="footer_style text-white text-center container-fluid">
-		<p>Copyright By Shubham Tiwari(Software Developer)[Ibirds Software Services].</p>
+		<p>Copyright By Shubham Tiwari</p>
 	</div>
 </footer>
 
@@ -556,6 +552,65 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
 		document.body.scrollTop = 0; // for Safari
 		document.documentElement.scrollTop = 0; //for chrome, firefox IE and opera
 	}
+
+
+
+
+
+
+
+   function fetch(){
+
+
+    $.get("https://api.covid19api.com/summary",
+       
+       function (data){
+       // console.log(data['Countries'].length);
+       var tbval = document.getElementById('tbval');
+
+       for(var i=1; i<(data['Countries'].length); i++ ){
+         var x = tbval.insertRow();
+         x.insertCell(0);
+
+         tbval.rows[i].cells[0].innerHTML = data['Countries'][i-1]['Country'];
+         tbval.rows[i].cells[0].style.background = '#7a4a91';
+          tbval.rows[i].cells[0].style.color = '#fff';
+
+          x.insertCell(1);
+         tbval.rows[i].cells[1].innerHTML = data['Countries'][i-1]['TotalConfirmed'];
+         tbval.rows[i].cells[1].style.background = '#4bb7d8';
+           
+             x.insertCell(2);
+         tbval.rows[i].cells[2].innerHTML = data['Countries'][i-1]['TotalRecovered'];
+         tbval.rows[i].cells[2].style.background = '#4bb7d8';
+             
+               x.insertCell(3);
+         tbval.rows[i].cells[3].innerHTML = data['Countries'][i-1]['TotalDeaths'];
+         tbval.rows[i].cells[3].style.background = '#4bb7d8';
+            
+             x.insertCell(4);
+         tbval.rows[i].cells[4].innerHTML = data['Countries'][i-1]['NewConfirmed'];
+         tbval.rows[i].cells[4].style.background = '#4bb7d8';
+            
+            x.insertCell(5);
+         tbval.rows[i].cells[5].innerHTML = data['Countries'][i-1]['NewRecovered'];
+         tbval.rows[i].cells[5].style.background = '#4bb7d8';
+            
+          x.insertCell(6);
+         tbval.rows[i].cells[6].innerHTML = data['Countries'][i-1]['NewDeaths'];
+         tbval.rows[i].cells[6].style.background = '#4bb7d8';
+            
+
+
+       }
+       }
+      
+      );
+   }
+
+
+
+
 </script>
 </body>
 </html>

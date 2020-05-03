@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+   <style type="text/css">
+
+
+
+   	html{
+   		scroll-behavior: smooth;
+   	}
+
+   	.row{
+   		margin-left: 0!important;
+   		margin-right: 0!important;
+   	}
+	*{
+		margin: 0; padding: 0; box-sizing: border-box; font-family: 'Muli', sans-serif;
+
+	}
+
+	.nav_style{
+		background-color: #a29bfe!important;
+	}
+	.nav_style a{color: white;}
+
+
+	/*..............................................  main header......................................................    */
+
+	.main_header{
+		height: 450px;
+		width: 100%;
+	}
+
+	.rightside h1{
+		font-size: 3rem;
+	}
+
+	.corona_root img{
+          animation: gocorona 3s linear infinite;
+	}
+
+	@keyframes gocorona {
+		0%{ transform: rotate(0); }
+		100%{ transform: rotate(360deg); }
+	}
+
+
+	.leftside img { animation: heartbeat 5s linear infinite; }
+
+	@keyframes heartbeat
+	{
+      0%
+      {
+      	transform: scale( .75);
+      }
+      20%
+      {
+      	transform: scale( 1);
+      }
+      40%
+      {
+      	transform: scale( .75);
+      }
+      60%
+      {
+      	transform: scale( 1);
+      }
+      80%
+      {
+      	transform: scale( .75);
+      }
+      100%
+      {
+      	transform: scale( 1);
+      }
+	}
+	/**********************corona update **************************/
+
+	.corona_update{
+		margin: 0 0 30px 0;
+	}
+	.corona_update h3{
+		color: #ff7675;
+	}
+	.corona_update h1{
+		font-size: 2rem; text-align: center;
+	}
+
+}
+
+
+/*/////////////// about section //////////////////////*/
+
+   .sub-section{
+   	background-color: #fbfafd;
+   }
+
+   /*///////////////////// footer //////////////////*/
+
+   .footer_style{
+   	background-color: #a29bfe!important;
+   }
+
+   .footer_style p{
+   	margin-bottom: 0%!important;
+   }
+   /*********** top scroll *************************/
+   #myBtn{
+   	display: none;
+   	position: fixed;
+   	bottom: 30px;
+   	right: 40px;
+   	z-index: 99;
+   	border: none;
+   	outline: none;
+   	background-color: #00A8FF;
+   	color: white;
+   	cursor: pointer;
+   	padding: 10px;
+   	border-radius: 10px;
+
+   }
+   #myBtn:hover{
+   	background: #606060;
+   }
+
+
+   /*  /////////////////// responsive css ///////////////////////////  */
+   @media(max-width: 768px)
+   {
+   	.main_header { height: 700px; text-align: center; }
+   	.main_header h1{
+   		text-align: center;
+   		padding: 0;
+   		width: 100%;
+   		font-size: 30px;
+   	}
+}
+   	.count_style{
+   		display: inline!important;
+   	}
+   	.count_style p{
+     text-align: center;
+   	}
+   	.about_res{
+   		margin-left: 0!important;
+   	}
+   
+</style>
+
+	</head>
+<body onload="data()">
+
+<nav class="navbar navbar-expand-lg nav_style p-3">
+  <a class="navbar-brand pl-5" href="#">COVID-19</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto pr-5">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+      	<a class="nav-link" href="index.php">About</a>
+      </li>
+
+       <li class="nav-item">
+      	<a class="nav-link" href="index.php">Symptoms</a>
+      </li>
+     
+      <li class="nav-item">
+      	<a class="nav-link" href="index.php">Prevention</a>
+      </li>
+     
+     <li class="nav-item">
+        <a class="nav-link" href="index.php">Worlddata</a>
+      </li>
+     
+      <li class="nav-item">
+        <a class="nav-link" href="india_covid_data.html">IndiaCoronaLive</a>
+      </li>
+     
+      <li class="nav-item">
+      	<a class="nav-link" href="index.php">Contact</a>
+      </li>
+     
+      </div>
+</nav>
+
+
+
+<div class="main_header">
+  <div class="row w-100 h-100" >
+    <div class="col-lg-5 col-md-5 col-12 order-lg-1 order-2">
+      <div class="leftside w-100 h-100 d-flex justify-content-center align-items-center">
+        <img src="images/eksath.png" width="300" height="300">
+      </div>
+    </div>
+    <div class="col-lg-7 col-md-7 col-12 order-lg-2 order-1" >
+      <div class="rightside w-100 h-100 d-flex justify-content-center align-items-center">
+        <h1>Let's Stay safe & Fight Together
+          Against Cor <span class="corona_root"><img src="images/virus.png" width="50" height="50"></span> na Virus</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<section class="corona_update container-fluid">
+  <div class ="my-5">
+    <h3 class="text-uppercase text-center"> COVID-19 LIVE UPDATES OF INDIA</h3>
+  </div>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped text-center" id="tablevalue">
+    <tr>
+      <th>LastUpdate</th>
+      <th>State</th>
+      <th>TotalConfirmed</th>
+      <th>Active</th>
+       <th>Death</th>
+      <th>Recovered</th>
+      
+      
+    </tr>
+  </table>
+</div>
+  
+  </div>
+</section>
+
+
+
+<!--////////////////////////////////////top cursor ///////////////////////////////// -->
+
+<div class="container scrolltop float-right pr-5">
+  <i class="fa fa-arrow-up" onclick="topFunction()" id="myBtn"></i>
+</div>
+
+<!-- //////////////////////  footer ////////////////////////////   -->
+
+<footer class="mt-5">
+  <div class="footer_style text-white text-center container-fluid">
+    <p>Copyright By Shubham Tiwari</p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  mybutton = document.getElementById("myBtn");
+// when the user scroll down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction(){
+    if(document.body.scrollTop >100 || document.documentElement.scrollTop >100){
+      mybutton.style.display ="block";
+    }
+    else{
+      mybutton.style.display ="none";
+    }
+  }
+  // when the user clicks on the button scroll to the top of the document
+  function topFunction(){
+    document.body.scrollTop = 0; // for Safari
+    document.documentElement.scrollTop = 0; //for chrome, firefox IE and opera
+  }
+
+function data(){
+
+   $.get('https://api.covid19india.org/data.json',
+
+     function(data){
+     // console.log(data['cases_time_series'].length);
+
+      var tablevalue = document.getElementById('tablevalue');
+       for(var i=1; i<(data['statewise'].length); i++ ){
+        var x = tablevalue.insertRow();
+        x.insertCell(0);
+
+        tablevalue.rows[i].cells[0].innerHTML = data['statewise'][i-1]['lastupdatedtime'];
+         tablevalue.rows[i].cells[0].style.background = '#7a4a91';
+          tablevalue.rows[i].cells[0].style.color = '#fff';
+
+
+          x.insertCell(1);
+         tablevalue.rows[i].cells[1].innerHTML = data['statewise'][i-1]['state'];
+         tablevalue.rows[i].cells[1].style.background = '#4bb7d8';
+         
+
+          x.insertCell(2);
+         tablevalue.rows[i].cells[2].innerHTML = data['statewise'][i-1]['confirmed'];
+         tablevalue.rows[i].cells[2].style.background = '#4bb7d8';
+         
+          x.insertCell(3);
+         tablevalue.rows[i].cells[3].innerHTML = data['statewise'][i-1]['active'];
+         tablevalue.rows[i].cells[3].style.background = '#4bb7d8';
+         
+          x.insertCell(4);
+         tablevalue.rows[i].cells[4].innerHTML = data['statewise'][i-1]['deaths'];
+         tablevalue.rows[i].cells[4].style.background = '#DC143C';
+         
+          x.insertCell(5);
+         tablevalue.rows[i].cells[5].innerHTML = data['statewise'][i-1]['recovered'];
+         tablevalue.rows[i].cells[5].style.background = '#4bb7d8';
+         
+          
+       }
+     }
+    );
+}
+
+
+</script>
+</body>
+</html>
